@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- Obligatory meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Other meta tags -->
+        <meta name="theme-color" content="#2aa35f">
+        <meta name="description" content="My personal website">
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow">
+        <meta name="google" content="notranslate">
+
+        <!-- Links -->
+        <!--  WE'RE ON A BOAT! -->
+        <link rel="icon" sizes="192x192" href="../images/icon.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" 
+        rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <!-- Moved tooltip styles to head -->
+        <style>
+            /* Tooltip container */
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                /* If you want dots under the hoverable text */
+                border-bottom: 1px dotted black; 
+            }
+  
+            /* Tooltip text */
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 300px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 6px;
+   
+                /* Position the tooltip text - see examples below! */
+                position: absolute;
+                z-index: 1;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -150px;
+            }
+  
+            /* Show the tooltip text when you mouse over the tooltip container */
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+        </style>
+
+        <title>James Commons</title>
+    </head>
+    <body>
+        <div id="title-div">
+            <h1 class="title" id="title">James Commons</h1>
+            <!-- <h3 class="title" id="subtitle">
+                
+            </h3> -->
+            <br>
+        </div>
+
+        <!-- All content for Pong, including title, goes here -->
+        <div id="game-div">
+            <p id="pong-prelude" class="tooltip">
+                PONG
+                <span class="tooltiptext">Use "w" and "s" to move your 
+                paddle, and escape to pause</span>
+            </p>
+            <canvas id="pong-canvas" width="800" height="500"></canvas>
+            <script src="../js/pong.js"></script>
+            <p id="mute-button">
+                <u>Click here to mute</u>
+            <p>
+            <script>
+              document.querySelector('#mute-button').addEventListener('click', () => {
+                mute = !mute;
+                if (mute) {
+                  document.querySelector('#mute-button').innerHTML = '<u>Click here to unmute</u>';
+                } else {
+                  document.querySelector('#mute-button').innerHTML = '<u>Click here to mute</u>';
+                }
+              });
+            </script>
+        </div>
+        <br>
+
+        <!-- Contact Me div -->
+        <h2 id="contact-me-title">Contact Me</h2>
+        <p id="actually-contact-me">
+            <a href="mailto:jcommons2002@gmail.com" title="Do it. I dare you">
+              jcommons2002@gmail.com
+            </a>
+        </p>
+        <p id="github-link">
+          <a href="https://github.com/jamescommons">Click here to visit my GitHub page</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+body {
+    background-color: #2aa35f;
+    text-align: justify;
+    font-family: "Roboto Mono", sans-serif;
+}
+
+.title {
+    text-align: center;
+}
+
+#subtitle {
+    font-weight: 500;
+}
+
+/* Pong */
+#game-div {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+    padding-top: 45px;
+}
+
+#pong-prelude {
+    grid-row: 1;
+    text-align: center;
+    font-weight: 400;
+}
+
+#pong-canvas {
+    grid-row: 2;
+    border: 1px solid #000000;
+    /* width: 800px;
+    height: 500px; */
+    background-color: #000000;
+}
+
+/* Contact me */
+#contact-me-title {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+#contact-me {
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: 150px 150px;
+    justify-items: center;
+}
+
+#morse-code-form {
+    grid-row: 1/span 1;
+    grid-column: 1;
+    justify-self: start;
+    margin-left: 40%;
+    height: 300px;
+    max-width: 60%;
+    max-height: 300px
+}
+
+#send-text {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: flex-end;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-style: italic;
+    color: rgb(0, 41, 175);
+}
+
+#arrow {
+    opacity: 1;
+    grid-row: 2;
+    grid-column: 2;
+    width: 100px;
+    align-self: flex-start;
+}
+
+#arrow:hover {
+    opacity: 0.6;
+}
+
+#morse-code-img {
+    grid-row: 1/span 1;
+    grid-column: 3;
+    height: 300px;
+    justify-self: center;
+    margin-right: 40%;
+}
+
+#actually-contact-me {
+    text-align: center;
+}
+
+#github-link {
+    text-align: center;
+}
